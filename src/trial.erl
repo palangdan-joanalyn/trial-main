@@ -14,3 +14,9 @@ main() -> io:fwrite('Displaying the sum and product of random numbers.'),Sum=add
 -export([run/0]).
 run() ->
     main().
+
+
+
+
+string_display()->
+    io:format("~nHello to Neptune and back..... Here I am again!!!").
