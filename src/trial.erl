@@ -19,4 +19,4 @@ run() ->
 
 
 string_display()->
-    io:format("~nHello to Neptune and back..... Here I am again!!!").
+    io:format("~nHello to Neptune and back..... Here I am again!!!"), io:format("this is trial n.0").
