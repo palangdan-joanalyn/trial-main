@@ -21,4 +21,5 @@ jobs:
           git remote add history https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/palangdan-joanalyn/trial-history.git
           git fetch history
           git status
+          git pull history main --allow-unrelated-histories
           git push history main:main
