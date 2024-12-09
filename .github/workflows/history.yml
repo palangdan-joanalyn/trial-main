@@ -2,8 +2,6 @@ name: Push to History Repository
 
 on: 
   push:
-    # tags:
-      # - 'v*' # Matches version tags like v1.0, v2.0
     branches:
       - main  # Script is triggered whenever there is a push to the main branch
 
@@ -19,6 +17,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.HISTORY_PAT }}
         run: |
+          echo "Check history repository"
           git remote add history https://x-access-token:${{ secrets.HISTORY_PAT }}@github.com/palangdan-joanalyn/trial-history.git
-          # git push milestone --tags
+          git fetch history
+          git status
           git push history main:main
