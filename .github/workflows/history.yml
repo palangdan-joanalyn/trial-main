@@ -19,6 +19,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.HISTORY_REPO_PAT }}
         run: |
-          git remote add history https://x-access-token:${{ secrets.HISTORY_REPO_PAT }}@github.com/palangdan-joanalyn/trial-history.git
+          git remote add history https://x-access-token:${{ secrets.HISTORY_PAT }}@github.com/palangdan-joanalyn/trial-history.git
           # git push milestone --tags
           git push history main:main
