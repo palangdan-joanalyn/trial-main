@@ -15,10 +15,10 @@ jobs:
 
       - name: Push to History Repository
         env:
-          GITHUB_TOKEN: ${{ secrets.HISTORY_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Check history repository"
-          git remote add history https://x-access-token:${{ secrets.HISTORY_PAT }}@github.com/palangdan-joanalyn/trial-history.git
+          git remote add history https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/palangdan-joanalyn/trial-history.git
           git fetch history
           git status
           git push history main:main
