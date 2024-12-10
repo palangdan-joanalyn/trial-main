@@ -1,5 +1,5 @@
 -module(trial).
-
+-export([run/0]).
 
 add_two_numbers(Num1, Num2) ->
     Num1 + Num2.
@@ -11,7 +11,7 @@ main() -> io:fwrite('Displaying the sum and product of random numbers.'),Sum=add
 
 
 
--export([run/0]).
+
 run() ->
     main().
 
