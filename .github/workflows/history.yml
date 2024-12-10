@@ -27,6 +27,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.HISTORY_PAT }}
         run: |
           echo "Check history repository"
+          #adds the remote repository to the main repository
           git remote add history https://x-access-token:${{ secrets.HISTORY_PAT }}@github.com/palangdan-joanalyn/trial-history.git
           git fetch history
           git status
