@@ -25,7 +25,7 @@ jobs:
         run: rebar3 eunit
 
       - name: Install Dialyzer
-        run: sudo apt-get install -y dialyzer
+        run: apt-get install -y dialyzer
 
       - name: Build PLT
         run: dialyzer --build_plt --apps erts kernel stdlib
