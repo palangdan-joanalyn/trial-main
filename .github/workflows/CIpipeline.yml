@@ -24,15 +24,21 @@ jobs:
       - name: Run Tests
         run: rebar3 eunit
 
-      - name: Install Dialyzer
-        run: apt-get install -y dialyzer
+      - name: Install Erlang and Dialyzer
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y software-properties-common
+          sudo add-apt-repository -y ppa:erlang/erlang
+          sudo apt-get update
+          sudo apt-get install -y erlang
+          sudo apt-get install -y erlang-dialyzer
 
       - name: Build PLT
         run: dialyzer --build_plt --apps erts kernel stdlib
-        
+
       - name: Static Code Analysis
         run: dialyzer --src -r src/
-
+  
       - name: Archive Build Artifacts
         uses: actions/upload-artifact@v4
         with:
