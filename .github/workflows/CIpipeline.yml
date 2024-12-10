@@ -26,12 +26,12 @@ jobs:
 
       - name: Install Erlang and Dialyzer
         run: |
-          sudo apt-get update
-          sudo apt-get install -y software-properties-common
-          sudo add-apt-repository -y ppa:erlang/erlang
-          sudo apt-get update
-          sudo apt-get install -y erlang
-          sudo apt-get install -y erlang-dialyzer
+          apt-get update
+          apt-get install -y software-properties-common
+          add-apt-repository -y ppa:erlang/erlang
+          apt-get update
+          apt-get install -y erlang
+          apt-get install -y erlang-dialyzer
 
       - name: Build PLT
         run: dialyzer --build_plt --apps erts kernel stdlib
