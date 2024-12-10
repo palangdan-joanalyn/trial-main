@@ -12,6 +12,7 @@ main() -> io:fwrite('Displaying the sum and product of random numbers.'),Sum=add
 
 
 
+
 run() ->
     main().
 
