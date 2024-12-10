@@ -1,4 +1,5 @@
 -module(trial).
+
 -export([run/0]).
 
 add_two_numbers(Num1, Num2) ->
